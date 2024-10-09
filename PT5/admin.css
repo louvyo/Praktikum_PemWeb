@@ -1,0 +1,188 @@
+.desktop-1,
+.desktop-1 * {
+  box-sizing: border-box;
+}
+.desktop-1 {
+  background: #ffffff;
+  padding: 75px 100px 75px 100px;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+.nav {
+  position: absolute;
+  inset: 0;
+}
+.louvy {
+  color: #000000;
+  text-align: center;
+  font: 400 48px "Poppins", sans-serif;
+  position: absolute;
+  left: 100px;
+  top: 75px;
+  width: 209px;
+  height: 64px;
+}
+.exit-button {
+  background: #d9d9d9;
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1191px;
+  top: 90px;
+  overflow: hidden;
+}
+.exit {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Poppins", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 100px;
+  top: 185px;
+}
+.rectangle-1 {
+  background: rgba(200, 129, 95, 0.81);
+  border-radius: 20px;
+  flex-shrink: 0;
+  width: 1240px;
+  height: 789px;
+  position: relative;
+}
+.update-button {
+  background: #d9d9d9;
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: absolute;
+  left: 1015px;
+  top: 700px;
+}
+.update {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Poppins", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-button {
+  background: #d9d9d9;
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: absolute;
+  left: 828px;
+  top: 700px;
+  overflow: hidden;
+}
+.add {
+  color: #000000;
+  text-align: center;
+  font: 400 32px "Poppins", sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-img {
+  flex-shrink: 0;
+  width: 1088px;
+  height: 269px;
+  position: static;
+}
+.rectangle-5 {
+  background: #9747ff;
+  border-radius: 25px;
+  width: 209px;
+  height: 269px;
+  position: absolute;
+  left: 986px;
+  top: 75px;
+}
+.rectangle-2 {
+  background: #9747ff;
+  border-radius: 25px;
+  width: 209px;
+  height: 269px;
+  position: absolute;
+  left: 107px;
+  top: 75px;
+}
+.rectangle-3 {
+  background: #9747ff;
+  border-radius: 25px;
+  width: 209px;
+  height: 269px;
+  position: absolute;
+  left: 400px;
+  top: 75px;
+}
+.rectangle-4 {
+  background: #9747ff;
+  border-radius: 25px;
+  width: 209px;
+  height: 269px;
+  position: absolute;
+  left: 693px;
+  top: 75px;
+}
+.rectangle-52 {
+  background: #9747ff;
+  border-radius: 25px;
+  width: 209px;
+  height: 269px;
+  position: absolute;
+  left: 986px;
+  top: 405px;
+}
+.rectangle-22 {
+  background: #9747ff;
+  border-radius: 25px;
+  width: 209px;
+  height: 269px;
+  position: absolute;
+  left: 107px;
+  top: 405px;
+}
+.rectangle-32 {
+  background: #9747ff;
+  border-radius: 25px;
+  width: 209px;
+  height: 269px;
+  position: absolute;
+  left: 400px;
+  top: 405px;
+}
+.rectangle-42 {
+  background: #9747ff;
+  border-radius: 25px;
+  width: 209px;
+  height: 269px;
+  position: absolute;
+  left: 693px;
+  top: 405px;
+}

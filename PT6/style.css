@@ -1,0 +1,850 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --background-color: #ffffff;
+  --text-color: #111111;
+  --main-color: #c8815f;
+  --big-font: 4.5rem;
+  --h2-font: 3.3rem;
+  --h3-font: 2rem;
+  --normal-font: 1rem;
+  --blue: #2980b9;
+  --red: tomato;
+  --orange: orange;
+  --black: #333;
+  --white: #fff;
+  --bg-color: #eee;
+  --dark-bg: rgba(0, 0, 0, 0.7);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 0.1rem solid #999;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 20px 14%;
+  transition: all 0.35s ease;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-color);
+}
+.navlist {
+  display: flex;
+}
+.navlist a {
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 10px 25px;
+  font-size: 1rem;
+  transition: all 0.36s ease;
+}
+.navlist a:hover {
+  color: var(--main-color);
+}
+
+.header-icons {
+  position: relative;
+}
+
+.header-icons .bx-shopping-bag {
+  position: absolute;
+  right: 200px; /* Mengatur posisi ke kanan */
+  top: 10px; /* Mengatur posisi ke atas */
+  font-size: 32px;
+  color: var(--text-color);
+  transition: all 0.36s ease;
+}
+
+.header-icons i:hover {
+  color: var(--main-color);
+}
+#menu-icon {
+  font-size: 34px;
+  color: var(--text-color);
+  z-index: 10001;
+  margin-right: 20px;
+  display: none;
+}
+
+section {
+  padding: 100px 14%;
+}
+.home {
+  min-height: 100vh;
+  width: 100%;
+  background: url(img/download-removebg-preview.png) no-repeat;
+  position: relative;
+  background-size: contain;
+  /* background-attachment: fixed; */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  background-position: 90% top;
+  background-color: #faf0e6;
+}
+.home-text h1 {
+  font-size: var(--big-font);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+.home-text span {
+  font-size: var(--h2-font);
+}
+.home-text p {
+  font-size: var(--normal-font);
+  font-weight: 500;
+  margin-bottom: 3rem;
+  letter-spacing: 0.2rem;
+}
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  background: var(--main-color);
+  color: var(--background-color);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.35s ease;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  background: var(--text-color);
+}
+
+header.sticky {
+  background: var(--background-color);
+  padding: 14px 14%;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0 / 10%);
+}
+.center-text {
+  text-align: center;
+}
+.center-text h2 {
+  font-size: var(--h3-font);
+}
+.featured-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.3rem;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.row {
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.image-container {
+  width: 100%;
+  padding-bottom: 60%;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  position: absolute;
+  width: 55%;
+  height: auto;
+  object-fit: cover;
+}
+
+.fea-text h5 {
+  font-size: 19px;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.fea-text p {
+  color: #555;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.row .arrow {
+  position: absolute;
+  bottom: 90px;
+  right: 30px;
+}
+
+.row .arrow i {
+  height: 35px;
+  width: 35px;
+  margin-top: 0.5rem;
+  background: var(--background-color);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+.row:hover {
+  transform: scale(0.9) translateY(-5px);
+  cursor: pointer;
+}
+.row:hover i {
+  background: var(--main-color);
+  color: var(--background-color);
+}
+.contact {
+  background: var(--text-color);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+.main-contact h3 {
+  font-size: 23px;
+  margin-bottom: 1.6rem;
+  color: var(--background-color);
+}
+.main-contact h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
+}
+.icons {
+  display: flex;
+  margin-top: 2rem;
+}
+.icons i {
+  font-size: 25px;
+  margin-right: 1rem;
+  color: #555;
+  transition: all 0.35s ease;
+}
+.icons i:hover {
+  color: var(--background-color);
+  transform: scale(1.1) translateY(-5px);
+}
+.main-contact li {
+  margin-bottom: 15px;
+}
+.main-contact li a {
+  display: block;
+  color: #555;
+  font-size: var(--normal-font);
+  font-weight: 600;
+  transition: all 0.35s ease;
+}
+
+.main-contact li a:hover {
+  transform: translateX(-8px);
+  color: var(--background-color);
+}
+
+.last-text {
+  text-align: center;
+  padding: 20px;
+  background: var(--text-color);
+}
+.last-text p {
+  color: var(--main-color);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+.top i {
+  font-size: 22px;
+  color: var(--background-color);
+  padding: 14px;
+  background: var(--main-color);
+  border-radius: 2rem;
+}
+
+@media (max-width: 1000px) {
+  header {
+    padding: 7px 4%;
+    transition: 0.2s;
+  }
+  header.sticky {
+    padding: 14px 4%;
+    transition: 0.2s;
+  }
+  section {
+    padding: 80px 4%;
+    transition: 0.1s;
+  }
+}
+
+@media (max-width: 670px) {
+  #menu-icon {
+    display: block;
+  }
+  .header-icons {
+    display: inline-flex;
+  }
+  .navlist {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 280px;
+    height: 120vh;
+    background: var(--background-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 150px 30px;
+    transition: all 0.45s ease;
+  }
+  .navlist a {
+    display: block;
+    margin: 1.2rem;
+  }
+  .navlist.open {
+    left: 0;
+  }
+}
+
+.aboutme {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #faf0e6;
+  padding-bottom: 0%;
+  padding-top: 0%;
+}
+
+.photocard {
+  flex: 1;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.info {
+  flex: 2;
+  transition: all 0.35s ease;
+}
+.info h1 {
+  font-size: var(--h2-font);
+  color: var(--main-color);
+}
+.info span {
+  color: var(--text-color);
+  cursor: pointer;
+}
+.info p {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.photocard img:hover {
+  transform: scale(1) translateY(-5px);
+}
+
+.darkmode label {
+  width: 50px;
+  height: 20px;
+  position: relative;
+  display: block;
+  background: var(--background-color);
+  border-radius: 200px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s ease;
+  top: -10px;
+}
+
+.darkmode label::after {
+  content: "";
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  top: 0.5px;
+  left: 1px;
+  background: var(--main-color);
+  border-radius: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.darkmode input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.darkmode input:checked + label {
+  background: #242424;
+}
+
+.darkmode input:checked + label::after {
+  background: linear-gradient(180deg, #777, #3a3a3a);
+  transform: translateX(154%);
+}
+.darkmode label:active::after {
+  width: 20px;
+}
+
+input:checked + label + body {
+  background: #242424;
+  color: #ffffff;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  max-width: 80%; /* Maksimum lebar pop-up */
+  width: 400px; /* Lebar pop-up */
+  position: relative;
+}
+
+#loginPopup {
+  position: fixed;
+  top: 75%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  z-index: 1001;
+  border-radius: 10px;
+  display: none;
+  max-width: 80%; /* Sesuaikan dengan lebar maksimum yang Anda inginkan */
+  width: 600px; /* Sesuaikan dengan lebar yang Anda inginkan */
+  margin: auto; /* Agar elemen tetap di tengah horizontal */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555; /* Warna ikon close */
+}
+
+.close-button:hover {
+  color: #c8815f; /* Warna ikon close saat dihover */
+}
+
+#loginButton {
+  position: relative;
+  top: 4px;
+  right: -20px;
+  background: transparent;
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 100px;
+  margin-bottom: 12px;
+  /* Efek transisi saat tombol dihover */
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+#loginButton:hover {
+  background: var(--main-color); /* Warna latar belakang saat dihover */
+  color: var(--background-color); /* Warna teks saat dihover */
+  border-color: var(--main-color); /* Warna border saat dihover */
+}
+
+/* Style for pop-up kupon */
+#couponPopup {
+  display: block; /* Set it to display by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  background: blur;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  align-items: center;
+  display: flex;
+  z-index: 1001;
+  border-radius: 10px;
+}
+
+#couponOverlay {
+  display: none; /* Set it to not display by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.discount {
+  font-size: 36px;
+  color: #c8815f;
+  margin-top: 10px;
+}
+
+.code {
+  font-size: 24px;
+  color: #555;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Gaya untuk elemen input */
+
+.input-form {
+  padding: 50px;
+  margin: 0 auto;
+  border: 1px solid var(--background-color); /* Reduce border width */
+  background-color: rgba(
+    240,
+    240,
+    240,
+    0.244
+  ); /* Apply background color to the container */
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  height: 400px;
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.input-form > * {
+  background-color: transparent; /* Make sure content inside the container is not affected by the background color */
+}
+
+.input-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: transparent; /* Hapus latar belakang */
+  color: white; /* Warna teks input */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gaya saat input aktif/fokus */
+.input-field:focus {
+  border-color: var(--main-color); /* Warna border saat aktif */
+  box-shadow: 0 0 5px rgba(200, 135, 95, 0.5); /* Efek bayangan saat aktif */
+}
+
+/* Gaya untuk label input */
+.label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 14px;
+  color: #777;
+  pointer-events: none;
+  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+/* Gaya label saat input diisi */
+.input-field:valid + .label,
+.input-field:focus + .label {
+  top: -10px;
+  font-size: 12px;
+  color: var(--main-color); /* Warna label saat input aktif/fokus */
+}
+
+/* Gaya label saat input kosong */
+.input-field:valid:not(:focus) + .label {
+  top: 8px;
+  font-size: 14px;
+  color: #777;
+}
+
+.admin {
+  min-height: 100vh;
+  width: 100%;
+  background: url(img/bapho.jpeg) no-repeat center center fixed;
+  background-size: 100% 255%;
+  position: relative;
+  background-color: #faf0e6;
+}
+
+#admin-panel {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+#admin-panel::before {
+  content: "";
+  background: url(img/istockphoto-1133192531-612x612.jpg);
+  background-size: cover;
+  filter: blur(5px); /* Ubah nilai blur sesuai keinginan Anda */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+#admin-panel p {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+  text-shadow: -1px -1px 0 #fff
+}
+
+*/ section {
+  padding: 2rem;
+}
+
+.add-btn,
+.option-btn,
+.delete-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.4rem 3rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.35s ease;
+}
+
+.add-btn:hover,
+.option-btn:hover,
+.delete-btn:hover {
+  background-color: var(--black);
+}
+
+.option-btn i,
+.delete-btn i {
+  padding-right: 0.5rem;
+}
+
+.option-btn {
+  background-color: var(--orange);
+}
+
+.delete-btn {
+  margin-top: 0;
+  background-color: var(--red);
+}
+
+.message {
+  background-color: var(--blue);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.message span {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.message i {
+  font-size: 2.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.message i:hover {
+  color: var(--red);
+}
+
+.add-product-form {
+  max-width: 50rem;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.add-product-form h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--black);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.add-product-form .box {
+  text-transform: none;
+  padding: 1rem 1.1rem;
+  font-size: 1.5rem;
+  color: var(--black);
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.display-product-table table {
+  width: 100%;
+  text-align: center;
+}
+
+.display-product-table table thead th {
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.display-product-table table td {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+.display-product-table table td:first-child {
+  padding: 0;
+}
+
+.display-product-table table tr:nth-child(even) {
+  background-color: var(--bg-color);
+}
+
+.display-product-table .empty {
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--black);
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+
+.edit-form-container {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  z-index: 1100;
+  background-color: var(--dark-bg);
+  padding: 2rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.edit-form-container form {
+  width: 30rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+.edit-form-container form .box {
+  width: 100%;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--black);
+  padding: 5px 8px;
+  text-transform: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0; /* Atur margin sesuai kebutuhan */
+}
